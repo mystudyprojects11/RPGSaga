@@ -80,7 +80,7 @@ export abstract class Hero {
   }
 
   // Обычная атака — наносит урон, равный силе героя
-  protected attack(opponent: Hero, logger: Logger): void {
+  attack(opponent: Hero, logger: Logger): void {
     const hit = opponent.takeDamage(this.strength);
     if (hit) {
       logger.log(
@@ -93,5 +93,5 @@ export abstract class Hero {
   }
 
   // Способность героя — у каждого наследника своя
-  protected abstract useAbility(opponent: Hero, logger: Logger): void;
+  abstract useAbility(opponent: Hero, logger: Logger): void;
 }

@@ -17,7 +17,7 @@ export class Archer extends Hero {
   }
 
   // Лучник не наносит урона при использовании способности
-  protected useAbility(opponent: Hero, logger: Logger): void {
+  useAbility(opponent: Hero, logger: Logger): void {
     // Если стрелы уже использованы — делаем обычную атаку
     if (this.fireUsed) {
       this.attack(opponent, logger);

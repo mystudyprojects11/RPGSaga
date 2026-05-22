@@ -8,7 +8,7 @@ export class Knight extends Hero {
     return 'Рыцарь';
   }
 
-  protected useAbility(opponent: Hero, logger: Logger): void {
+  useAbility(opponent: Hero, logger: Logger): void {
     const damage = Math.round(this.strength * 1.3);
     const hit = opponent.takeDamage(damage);
     if (hit) {
