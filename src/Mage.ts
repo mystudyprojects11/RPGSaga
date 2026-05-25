@@ -32,7 +32,7 @@ export class Mage extends Hero {
   }
 
   // Маг не наносит урона при использовании способности
-  protected useAbility(opponent: Hero, logger: Logger): void {
+  useAbility(opponent: Hero, logger: Logger): void {
     this.enchanted = true;
     logger.log(this.getLabel() + ' использует (Заворожение)');
   }
